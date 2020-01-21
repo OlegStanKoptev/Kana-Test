@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using System;
+using System.IO;
 using UIKit;
 
 namespace KanaTest
@@ -14,7 +15,7 @@ namespace KanaTest
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-            SymbolChecker.UseNumbers();
+            //SymbolChecker.UseNumbers();
             Symbol.Text = SymbolChecker.NewSymbol();
             InputText.Text = "";
             StatusImage.Hidden = true;
@@ -49,8 +50,11 @@ namespace KanaTest
 
         partial void TouchUpInside(UIButton sender)
         {
-            SymbolChecker.Change();
-            Symbol.Text = SymbolChecker.NewSymbol();
+            //SymbolChecker.Change();
+            //Symbol.Text = SymbolChecker.NewSymbol();
+            string[] temp = InputText.Text.Split(" ");
+            if (temp.Length == 2 && temp[0] != "" && temp[1] != "") File.AppendAllText("KanaDictionary.txt", Environment.NewLine + $"{temp[0]} {temp[1]}");
+            SymbolChecker.UpdateDictionary();
         }
 
         partial void DismissKeyboard(UITextField sender)

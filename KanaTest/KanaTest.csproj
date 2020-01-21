@@ -131,5 +131,9 @@
         </Compile>
         <Compile Include="SymbolChecker.cs" />
     </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="KanaDictionary.txt" />
+      <BundleResource Include="dict.txt" />
+    </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

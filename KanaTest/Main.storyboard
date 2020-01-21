@@ -55,10 +55,11 @@
                                 <nil key="highlightedColor"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7272" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="154" y="58" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7272" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hidden="YES">
+                                <rect key="frame" x="307" y="101" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30" weight="black"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="TouchUpInside:" destination="BYZ-38-t0r" id="7279" eventType="touchUpInside"/>
                                 </connections>
